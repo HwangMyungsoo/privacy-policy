@@ -125,11 +125,12 @@
     <!-- 한국어 -->
     <div class="section-ko">
         <h1>개인정보 처리방침</h1>
-        <p class="subtitle">Beacon Scanner | 시행일: 2026년 3월 6일</p>
+        <p class="subtitle">Beacon Scanner | 시행일: 2026년 9월 24일 (최초 시행 2026년 3월 6일)</p>
 
         <div class="highlight">
-            <strong>Beacon Scanner는 사용자의 개인정보를 외부 서버로 전송하지 않습니다.</strong><br>
+            <strong>Beacon Scanner는 스캔 데이터를 외부 서버로 전송하지 않습니다.</strong><br>
             모든 스캔 데이터는 사용자의 기기 내에서만 처리되며, 앱 종료 시 삭제됩니다.
+            광고(AdMob)와 원격 설정(Firebase)을 위해 Google 서비스와 통신하는 내용은 1-3, 1-4항을 참고하시기 바랍니다.
         </div>
 
         <h2>1. 수집하는 정보</h2>
@@ -178,6 +179,16 @@
         </ul>
         <p>Google의 데이터 수집 및 처리에 대한 자세한 내용은 <a href="https://policies.google.com/privacy" target="_blank">Google 개인정보처리방침</a>을 참고하시기 바랍니다.</p>
 
+        <h3>1-4. 제3자(Google Firebase)가 수집하는 정보</h3>
+        <p>본 앱은 광고 노출 여부 등 앱 설정을 원격으로 제어하기 위해 Google Firebase Remote Config를 사용합니다. 설정을 조회할 때 다음 정보가 Google 서버로 전송될 수 있습니다:</p>
+        <ul>
+            <li>Firebase 설치 ID (앱 설치 단위로 생성되는 익명 식별자)</li>
+            <li>기기 정보 (모델, OS 버전, 언어, 국가)</li>
+            <li>앱 버전</li>
+            <li>IP 주소</li>
+        </ul>
+        <p>이 정보는 사용자를 개인적으로 식별하는 데 사용되지 않습니다. 자세한 내용은 <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase 개인정보 보호 및 보안</a>을 참고하시기 바랍니다.</p>
+
         <h2>2. 앱 권한</h2>
         <table>
             <tr>
@@ -197,8 +208,12 @@
                 <td>Android 요구사항으로 BLE 스캔에 필요 (실제 GPS 위치를 수집하지 않음)</td>
             </tr>
             <tr>
+                <td>ACCESS_COARSE_LOCATION</td>
+                <td>Android 12 이상에서 ACCESS_FINE_LOCATION과 함께 요청해야 하는 권한 (실제 위치를 수집하지 않음)</td>
+            </tr>
+            <tr>
                 <td>INTERNET</td>
-                <td>광고 로드 (AdMob)</td>
+                <td>광고 로드 (AdMob) 및 원격 설정 조회 (Firebase)</td>
             </tr>
         </table>
 
@@ -223,11 +238,12 @@
     <!-- English -->
     <div class="section-en">
         <h1>Privacy Policy</h1>
-        <p class="subtitle">Beacon Scanner | Effective Date: March 6, 2026</p>
+        <p class="subtitle">Beacon Scanner | Effective Date: September 24, 2026 (originally March 6, 2026)</p>
 
         <div class="highlight">
-            <strong>Beacon Scanner does not transmit your personal information to any external server.</strong><br>
+            <strong>Beacon Scanner does not transmit your scan data to any external server.</strong><br>
             All scan data is processed only on your device and deleted when the app is closed.
+            See sections 1-3 and 1-4 for communication with Google services for ads (AdMob) and remote configuration (Firebase).
         </div>
 
         <h2>1. Information We Collect</h2>
@@ -276,6 +292,16 @@
         </ul>
         <p>For details on Google's data collection and processing, please refer to the <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>.</p>
 
+        <h3>1-4. Information Collected by Third Parties (Google Firebase)</h3>
+        <p>This app uses Google Firebase Remote Config to control app settings remotely, such as whether ads are shown. When fetching configuration, the following information may be sent to Google servers:</p>
+        <ul>
+            <li>Firebase installation ID (an anonymous identifier generated per app installation)</li>
+            <li>Device information (model, OS version, language, country)</li>
+            <li>App version</li>
+            <li>IP address</li>
+        </ul>
+        <p>This information is not used to personally identify you. For details, please refer to <a href="https://firebase.google.com/support/privacy" target="_blank">Privacy and Security in Firebase</a>.</p>
+
         <h2>2. App Permissions</h2>
         <table>
             <tr>
@@ -295,8 +321,12 @@
                 <td>Required by Android for BLE scanning (does not collect actual GPS location)</td>
             </tr>
             <tr>
+                <td>ACCESS_COARSE_LOCATION</td>
+                <td>Must be requested together with ACCESS_FINE_LOCATION on Android 12 and later (does not collect actual location)</td>
+            </tr>
+            <tr>
                 <td>INTERNET</td>
-                <td>Loading ads (AdMob)</td>
+                <td>Loading ads (AdMob) and fetching remote configuration (Firebase)</td>
             </tr>
         </table>
 
